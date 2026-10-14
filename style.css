@@ -54,19 +54,27 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    gap: 8px 22px;
+    gap: 6px;
+    padding: 7px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface);
 }
 
 nav a {
+    padding: 8px 14px;
+    border-radius: 999px;
     color: var(--muted);
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 nav a:hover,
-nav a:focus {
-    color: var(--gold-light);
+nav a:focus-visible,
+nav a.active {
+    background: var(--gold);
+    color: #172033;
 }
 
 /* Page sections */
